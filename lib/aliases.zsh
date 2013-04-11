@@ -24,5 +24,9 @@ alias sl=ls # often screw this up
 
 alias afind='ack-grep -il'
 
-alias vi='mvim -v'
+if [[ $('uname') == "Darwin" ]];then
+	alias vi='mvim -v'
+else
+	alias vi='vim'
+fi
 alias reload='source ~/.zshrc'
