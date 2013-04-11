@@ -37,3 +37,7 @@ cd () {
 alias md='mkdir -p'
 alias rd=rmdir
 alias d='dirs -v | head -10'
+
+
+alias e='cd /Volumes/e_win'
+alias dl='cd /Volumes/h_win/mac_downloads'

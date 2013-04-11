@@ -25,3 +25,4 @@ alias sl=ls # often screw this up
 alias afind='ack-grep -il'
 
 alias vi='mvim -v'
+alias reload='source ~/.zshrc'
