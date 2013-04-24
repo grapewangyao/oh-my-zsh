@@ -21,23 +21,22 @@ alias 8='cd +8'
 alias 9='cd +9'
 
 cd () {
-  if   [[ "x$*" == "x..." ]]; then
-    cd ../..
-  elif [[ "x$*" == "x...." ]]; then
-    cd ../../..
-  elif [[ "x$*" == "x....." ]]; then
-    cd ../../../..
-  elif [[ "x$*" == "x......" ]]; then
-    cd ../../../../..
-  else
-    builtin cd "$@"
-  fi
+	if   [[ "x$*" == "x..." ]]; then
+		cd ../..
+	elif [[ "x$*" == "x...." ]]; then
+		cd ../../..
+	elif [[ "x$*" == "x....." ]]; then
+		cd ../../../..
+	elif [[ "x$*" == "x......" ]]; then
+		cd ../../../../..
+	elif [[ "$1" =~ "^[d-h]{1}$" ]] ;then
+		cd /Volumes/${1}_win
+	else
+		builtin cd "$@"
+	fi
 }
 
 alias md='mkdir -p'
 alias rd=rmdir
 alias d='dirs -v | head -10'
 
-
-alias e='cd /Volumes/e_win'
-alias dl='cd /Volumes/h_win/mac_downloads'
