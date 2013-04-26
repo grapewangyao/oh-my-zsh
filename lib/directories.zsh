@@ -22,21 +22,6 @@ alias 8='cd -8'
 alias 9='cd -9'
 
 cd () {
-<<<<<<< HEAD
-	if   [[ "x$*" == "x..." ]]; then
-		cd ../..
-	elif [[ "x$*" == "x...." ]]; then
-		cd ../../..
-	elif [[ "x$*" == "x....." ]]; then
-		cd ../../../..
-	elif [[ "x$*" == "x......" ]]; then
-		cd ../../../../..
-	elif [[ "$1" =~ "^[d-h]{1}$" ]] ;then
-		cd /Volumes/${1}_win
-	else
-		builtin cd "$@"
-	fi
-=======
   if   [[ "x$*" == "x..." ]]; then
     cd ../..
   elif [[ "x$*" == "x...." ]]; then
@@ -48,10 +33,11 @@ cd () {
   elif [ -d ~/.autoenv ]; then
     source ~/.autoenv/activate.sh
     autoenv_cd "$@"
+  elif [[ "$1" =~ "^[d-h]{1}$" ]] ;then
+			cd /Volumes/${1}_win
   else
     builtin cd "$@"
   fi
->>>>>>> robbyrussell/master
 }
 
 alias md='mkdir -p'
