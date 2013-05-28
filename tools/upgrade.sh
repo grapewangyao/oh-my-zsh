@@ -1,13 +1,14 @@
-current_path=`pwd`
-current_path=${current_path/ /\\ }
 printf '\033[0;34m%s\033[0m\n' "Upgrading Oh My Zsh"
 cd "$ZSH"
+<<<<<<< HEAD
 
 git remote add robbyrussell https://github.com/robbyrussell/oh-my-zsh.git
 git fetch robbyrussell
 git merge robbyrussell/master
 git push origin master
 
+=======
+>>>>>>> robbyrussell/master
 if git pull origin master
 then
 	printf '\033[0;32m%s\033[0m\n' '         __                                     __   '
@@ -22,4 +23,3 @@ else
 	printf '\033[0;31m%s\033[0m\n' 'There was an error updating. Try again later?'
 fi
 
-cd "$current_path"
