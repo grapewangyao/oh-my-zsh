@@ -1,14 +1,11 @@
 printf '\033[0;34m%s\033[0m\n' "Upgrading Oh My Zsh"
 cd "$ZSH"
-<<<<<<< HEAD
 
 git remote add robbyrussell https://github.com/robbyrussell/oh-my-zsh.git
 git fetch robbyrussell
 git merge robbyrussell/master
 git push origin master
 
-=======
->>>>>>> robbyrussell/master
 if git pull origin master
 then
 	printf '\033[0;32m%s\033[0m\n' '         __                                     __   '
