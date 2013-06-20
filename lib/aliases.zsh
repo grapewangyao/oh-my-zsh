@@ -10,7 +10,7 @@ alias -- -='cd -'
 alias _='sudo'
 alias please='sudo'
 
-#alias g='grep -in'
+alias grep='grep -in'
 
 # Show history
 alias history='fc -l 1'
@@ -23,10 +23,3 @@ alias la='ls -lA'
 alias sl=ls # often screw this up
 
 alias afind='ack-grep -il'
-
-if [[ $('uname') == "Darwin" ]];then
-	alias vi='mvim -v'
-else
-	alias vi='vim'
-fi
-alias reload='source ~/.zshrc'

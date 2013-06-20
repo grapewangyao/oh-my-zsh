@@ -33,8 +33,6 @@ cd () {
   elif [ -d ~/.autoenv ]; then
     source ~/.autoenv/activate.sh
     autoenv_cd "$@"
-  elif [[ "$1" =~ "^[d-h]{1}$" ]] ;then
-			cd /Volumes/${1}_win
   else
     builtin cd "$@"
   fi
