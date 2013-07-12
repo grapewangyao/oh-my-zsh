@@ -1,10 +1,5 @@
+if [[ $('uname') =~ "CYGWIN" ]];then
 
-#macvim
-if [[ $('uname') =~ "Darwin" ]];then
-	
-	alias vi='mvim -v'
-
-	#cd to windows volumes
 	cd () {
 		if   [[ "x$*" == "x..." ]]; then
 			cd ../..
@@ -15,7 +10,7 @@ if [[ $('uname') =~ "Darwin" ]];then
 		elif [[ "x$*" == "x......" ]]; then
 			cd ../../../../..
 		elif [[ "$1" =~ "^[d-h]{1}$" ]] ;then
-			cd /Volumes/${1}_win
+			cd /cygdrive/${1}
 		else
 			builtin cd "$@"
 		fi
