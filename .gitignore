@@ -1,5 +1,11 @@
 locals.zsh
 log/.zsh_history
 projects.zsh
+<<<<<<< HEAD
+=======
+-custom/*
+-!custom/example
+-!custom/example.zsh
+>>>>>>> robbyrussell/master
 *.swp
 cache/

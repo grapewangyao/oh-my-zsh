@@ -15,4 +15,5 @@ if [[ $('uname') =~ "CYGWIN" ]];then
 			builtin cd "$@"
 		fi
 	}
+	unalias vi
 fi
