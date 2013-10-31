@@ -1,3 +1,2 @@
-alias pkg='mvn package'
-alias run='mvn jetty:run'
-alias install='mvn install'
+alias install='mvn clean install'
+alias run='mvn jetty:deploy-war'
