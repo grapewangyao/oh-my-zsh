@@ -1,8 +1,7 @@
 
 #macvim
-if [[ $('uname') =~ "Darwin" ]];then
+if [[ `uname -a` =~ "Ubuntu" ]];then
 	
-	alias vi='mvim -v'
 
 	#cd to windows volumes
 	cd () {
@@ -15,7 +14,7 @@ if [[ $('uname') =~ "Darwin" ]];then
 		elif [[ "x$*" == "x......" ]]; then
 			cd ../../../../..
 		elif [[ "$1" =~ "^[d-h]{1}$" ]] ;then
-			cd /Volumes/${1}_win
+			cd /media/win_${1}
 		else
 			builtin cd "$@"
 		fi
