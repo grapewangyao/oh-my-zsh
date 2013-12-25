@@ -15,24 +15,6 @@ mkdir -p $1
 cd $1
 }
 
-<<<<<<< HEAD
-function ssh(){
-if [[ "$1" =~ "^0[0-9]{1}$" ]] ;then
-	/usr/bin/ssh "liangwei@yunbd$1.mail.cnb.yahoo.com"
-elif [[ "$1" =~ "^s1$" ]] ;then
-	/usr/bin/ssh "liangwei@125.208.1.22" -p7888
-elif [[ "$1" =~ "^s2$" ]] ;then
-	/usr/bin/ssh "liangwei@125.208.1.21" -p7888
-else
-	/usr/bin/ssh $@
-fi
-}
-
-
-
-
-
-=======
 #
 # Get the value of an alias.
 #
@@ -91,4 +73,3 @@ function env_default() {
     env | grep -q "^$1=" && return 0 
     export "$1=$2"       && return 3
 }
->>>>>>> robbyrussell/master
