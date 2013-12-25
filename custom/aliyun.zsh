@@ -1,2 +1,5 @@
 alias install='mvn clean install'
-alias run='mvn jetty:deploy-war'
+alias run='mvn jetty:run'
+alias pkg='mvn clean package'
+alias update='mvn eclipse:eclipse -U'
+alias test_report='mvn cobertura:cobertura'
